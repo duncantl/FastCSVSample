@@ -16,7 +16,7 @@
  */
 #include <stdio.h>
 #include <string.h>
-#include <Rdefines.h>
+#include "csvSampler.h"
 
 SEXP
 R_csv_sample(SEXP r_filename, SEXP r_rows)

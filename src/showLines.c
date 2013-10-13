@@ -57,11 +57,11 @@ main(int argc, char *argv[])
 unsigned int
 getNextRow(Inputs *in)
 {
-    int status;
+    int status = 0;
     int nextLine = 0;
     if(in->rowFile) {
-	status = fscanf(in->rowFile, "%d", &nextLine) != 0 && status != EOF;
-        return(status ? nextLine : 0);
+	status = fscanf(in->rowFile, "%d", &nextLine) != 0;
+        return(status != EOF ? nextLine : 0);
     } else {
         if(in->args.current < in->args.total) {
 	    nextLine = atoi(in->args.argv[in->args.current++]);
