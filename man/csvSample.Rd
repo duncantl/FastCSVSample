@@ -7,7 +7,7 @@
   compiled code to read individual lines and return
   only the ones of interest. It is fast as it
   doesn't use a lot of memory, reading one line at a time.
-  This compares with using \link[base]{\code{readLines}}
+  This compares with using \code{\link[base]{readLines}}
   and a connection.
 
   This can be used for non-CSV files as the actual lines are not
@@ -36,7 +36,7 @@ A character vector containing the sampled lines.
 Duncan Temple Lang
 }
 \seealso{
-  \code{\link[base]{read.csv}}
+  \code{\link[utils]{read.csv}}
   \code{\link[base]{file}}  
 }
 \examples{
