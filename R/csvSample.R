@@ -28,5 +28,5 @@ getNumLines =
 function(file)
 {
    txt = system(sprintf("wc -l %s", file), intern = TRUE)
-   as.integer(gsub("^ ?([0-9]+) .*", "\\1", txt))
+   as.integer(gsub("^[[:space:]]*([0-9]+) .*", "\\1", txt))
 }
